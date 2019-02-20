@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require "bundler/setup"
+require "skyclient"
+
+a = Skyclient::ServiceInstance.new
+a.create
+puts "sleeping 30 seconds for binding"
+sleep 30
+a.bind
+puts a.database_url
