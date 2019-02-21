@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mike Danko"]
   spec.email         = ["mike@l4m3.com"]
 
-  spec.summary       = %q{BASDASD}
-  spec.description   = %q{ASDASDASD}
-  # spec.homepage      = "ASDASDASDASD"
+  spec.summary       = %q{Skyclient}
+  spec.description   = %q{Skyclient}
+  spec.homepage      = "https://github.com/skord/skyclient"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+    Dir.glob('**/*').reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
